@@ -1,7 +1,7 @@
 #
 # This is free software, lisence use MIT.
 # 
-# Copyright (C) 2019 KFERMercer <KFER.Mercer@gmail.com>
+# Copyright (C) 2020 KFERMercer <KFER.Mercer@gmail.com>
 # 
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
@@ -23,7 +23,7 @@ jobs:
     steps:
 
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
       with:
         ref: master
         fetch-depth: 0
@@ -47,8 +47,8 @@ jobs:
         else
         echo "There is no merge commits."
         fi
-
     - name: Push Commits
       env:
         DOWNSTREAM_BRANCH: master
       run: git push origin $DOWNSTREAM_BRANCH
+      
