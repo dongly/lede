@@ -1,18 +1,16 @@
 # Copyright (C) 2018-2020 Lienol <lawlienol@gmail.com>
 #
-# This is free software, licensed under the Apache License, Version 2.0 .
+# This is free software, licensed under the GNU General Public License v3.
 #
 
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI support for KodExplorer
-LUCI_DEPENDS:=+nginx +zoneinfo-asia +php7 +php7-fpm +php7-mod-curl +php7-mod-gd +php7-mod-iconv +php7-mod-json +php7-mod-mbstring +php7-mod-opcache +php7-mod-session +php7-mod-zip
+LUCI_DEPENDS:=+nginx-ssl +unzip +zoneinfo-asia +php8 +php8-fpm +php8-mod-curl +php8-mod-gd +php8-mod-iconv +php8-mod-mbstring +php8-mod-opcache +php8-mod-session +php8-mod-zip +php8-mod-sqlite3 +php8-mod-pdo +php8-mod-pdo-sqlite +php8-mod-pdo-mysql +php8-cgi +php8-mod-dom
 LUCI_PKGARCH:=all
-PKG_VERSION:=1.0
-PKG_RELEASE:=10-20191217
+PKG_VERSION:=14
+PKG_DATE:=20210505
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
-
-

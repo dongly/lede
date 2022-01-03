@@ -9,9 +9,8 @@ LUCI_TITLE:=LuCI support for ttyd
 LUCI_DEPENDS:=+ttyd
 LUCI_PKGARCH:=all
 PKG_VERSION:=1.0
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
-

@@ -76,6 +76,7 @@ Package/rtl8723bu-firmware = $(call Package/firmware-default,RealTek RTL8723BU f
 define Package/rtl8723bu-firmware/install
 	$(INSTALL_DIR) $(1)/lib/firmware/rtlwifi
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/rtlwifi/rtl8723bu_nic.bin $(1)/lib/firmware/rtlwifi
+	ln -s rtl8723bu_nic.bin $(1)/lib/firmware/rtlwifi/rtl8723bs_nic.bin
 endef
 $(eval $(call BuildPackage,rtl8723bu-firmware))
 
